@@ -18,5 +18,5 @@ codestyle-check: ## Check all Python scripts code style
 codestyle-fix: ## Fix all Python scripts code style
 	@. .venv/bin/activate; black .
 
-run:
+run: ## Run
 	@. .venv/bin/activate; python src/run.py
