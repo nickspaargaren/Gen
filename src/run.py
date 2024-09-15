@@ -1,18 +1,17 @@
-import torch
-from diffusers import FluxPipeline
+from mflux.flux.flux import Flux1
+from mflux.config.config import Config
 
-pipe = FluxPipeline.from_pretrained(
-    "black-forest-labs/FLUX.1-schnell", torch_dtype=torch.bfloat16
+flux = Flux1.from_alias(
+    alias="schnell",
+    quantize=8,
 )
 
-pipe.enable_sequential_cpu_offload()
-
 prompt = "A cat holding a sign that says hello world"
-image = pipe(
-    prompt,
-    guidance_scale=0.0,
-    num_inference_steps=4,
-    max_sequence_length=256,
-    generator=torch.Generator("cpu").manual_seed(0),
-).images[0]
-image.save("flux-schnell.png")
+
+image = flux.generate_image(
+    prompt=prompt,
+    seed=0,
+    config=Config(num_inference_steps=4),
+)
+
+image.save(path="flux-schnell.png")
