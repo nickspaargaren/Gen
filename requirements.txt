@@ -30,7 +30,7 @@ safetensors==0.4.5
 sentencepiece==0.2.0
 setuptools==74.1.2
 sympy==1.13.2
-tokenizers==0.19.1
+tokenizers==0.20.0
 torch==2.4.1
 torchaudio==2.4.1
 torchvision==0.19.1
