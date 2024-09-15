@@ -13,4 +13,4 @@ To set up and run this project locally, ensure you have the following dependenci
 
 ### Steps
 
-- Run `make` to list all vailable commands
+- Run `make` to list all available commands
