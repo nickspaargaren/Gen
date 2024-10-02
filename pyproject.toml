@@ -10,6 +10,7 @@ package-mode = false
 python = "^3.12"
 mflux = "^0.3.0"
 black = "^24.8.0"
+pathlib = "^1.0.1"
 
 
 [build-system]
