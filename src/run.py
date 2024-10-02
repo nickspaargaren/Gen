@@ -1,6 +1,7 @@
 from mflux.flux.flux import Flux1
 from mflux.config.config import Config
 from pathlib import Path
+from pathvalidate import sanitize_filepath
 
 
 def main():
@@ -20,7 +21,9 @@ def main():
         config=Config(num_inference_steps=4),
     )
 
-    image.save(outPath / "flux-schnell.png")
+    fileName = sanitize_filepath(prompt)
+
+    image.save(outPath / f"{fileName}.png")
 
 
 if __name__ == "__main__":
