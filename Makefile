@@ -15,4 +15,4 @@ codestyle-fix: ## Fix all Python scripts code style
 	@poetry run black .
 
 run: ## Run
-	@poetry run python src/run.py
+	@poetry run python src/main.py --prompt "$(filter-out $@,$(MAKECMDGOALS))"

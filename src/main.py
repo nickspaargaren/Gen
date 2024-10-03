@@ -1,10 +1,25 @@
-from mflux.flux.flux import Flux1
 from mflux.config.config import Config
+from mflux.flux.flux import Flux1
 from pathlib import Path
 from pathvalidate import sanitize_filepath
+import argparse
+import sys
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Generate an image based on a prompt.")
+    parser.add_argument(
+        "--prompt",
+        type=str,
+        help="The prompt to generate the image.",
+        required=True,
+    )
+    args = parser.parse_args()
+
+    if not args.prompt:
+        print("Error: The --prompt argument is required.")
+        sys.exit(1)
+
     outPath = Path(__file__).parent.parent / "out"
     outPath.mkdir(parents=True, exist_ok=True)
 
@@ -13,8 +28,7 @@ def main():
         quantize=8,
     )
 
-    prompt = "A cat holding a sign that says hello world"
-
+    prompt = args.prompt
     image = flux.generate_image(
         prompt=prompt,
         seed=0,
@@ -22,7 +36,6 @@ def main():
     )
 
     fileName = sanitize_filepath(prompt)
-
     image.save(outPath / f"{fileName}.png")
 
 
