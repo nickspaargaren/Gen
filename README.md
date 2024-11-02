@@ -6,7 +6,7 @@ To set up and run this project locally, ensure you have the following dependenci
 
 ### Prerequisites:
 
-- macOS
+- macOS (Apple silicon)
 - Python (3.12 or higher)
 - Make
 - Poetry (for dependency management)
