@@ -1,9 +1,9 @@
 from mflux.config.config import Config
 from mflux.flux.flux import Flux1
 from pathlib import Path
-from pathvalidate import sanitize_filepath
 import argparse
 import sys
+from utils import create_safe_filename
 
 
 def main():
@@ -35,7 +35,7 @@ def main():
         config=Config(num_inference_steps=4),
     )
 
-    fileName = sanitize_filepath(prompt)
+    fileName = create_safe_filename(prompt)
     image.save(outPath / f"{fileName}.png")
 
 
