@@ -12,6 +12,7 @@ mflux = "^0.3.0"
 black = "^24.10.0"
 pathlib = "^1.0.1"
 pathvalidate = "^3.2.1"
+pytest = "^8.3.3"
 
 
 [build-system]

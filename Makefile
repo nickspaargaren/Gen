@@ -14,5 +14,8 @@ codestyle-check: ## Check all Python scripts code style
 codestyle-fix: ## Fix all Python scripts code style
 	@poetry run black .
 
+test: ## Run all tests
+	@poetry run pytest
+
 run: ## Run
 	@poetry run python src/main.py --prompt "$(filter-out $@,$(MAKECMDGOALS))"
