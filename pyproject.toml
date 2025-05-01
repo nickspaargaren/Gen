@@ -8,7 +8,7 @@ package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.12"
-mflux = "^0.5.1"
+mflux = "^0.7.0"
 black = "^25.1.0"
 pathlib = "^1.0.1"
 pathvalidate = "^3.2.3"
