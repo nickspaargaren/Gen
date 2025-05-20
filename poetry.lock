@@ -706,20 +706,20 @@ dev = ["meson-python (>=0.13.1,<0.17.0)", "pybind11 (>=2.13.2,!=2.13.3)", "setup
 
 [[package]]
 name = "mflux"
-version = "0.5.1"
+version = "0.7.1"
 description = "A MLX port of FLUX based on the Huggingface Diffusers implementation."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "mflux-0.5.1-py3-none-any.whl", hash = "sha256:2f22800acb1ca6f29ab0b1c78f1fffbc35f62539c13d7788842edccd576a8953"},
-    {file = "mflux-0.5.1.tar.gz", hash = "sha256:f03216f9d4b8abe5b97e66fdca232dc5f79d57b18e4b5d3d57304cbaa5f01d6c"},
+    {file = "mflux-0.7.1-py3-none-any.whl", hash = "sha256:fe655805187e927878b2103ff897702fa5790604aa6fce1c9c80224c6d007684"},
+    {file = "mflux-0.7.1.tar.gz", hash = "sha256:f2a2c471815a65d5ad03f5880c6d67d6576cec564a7e8aba88cc8ca9469cb2c1"},
 ]
 
 [package.dependencies]
 huggingface-hub = ">=0.24.5,<1.0"
 matplotlib = ">=3.9.2,<4.0"
-mlx = ">=0.20.0,<1.0"
+mlx = ">=0.22.0,<0.26.0"
 numpy = ">=2.0.1,<3.0"
 opencv-python = ">=4.10.0,<5.0"
 piexif = ">=1.1.3,<2.0"
@@ -739,7 +739,7 @@ tqdm = ">=4.66.5,<5.0"
 transformers = ">=4.44.0,<5.0"
 
 [package.extras]
-dev = ["pytest (>=8.3.0,<9.0)", "pytest-timer (>=1.0,<2.0)"]
+dev = ["mlx (==0.25.0)", "pytest (>=8.3.0,<9.0)", "pytest-timer (>=1.0,<2.0)"]
 
 [[package]]
 name = "mlx"
@@ -2111,4 +2111,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.12"
-content-hash = "c819591b48cec18422a8511a521ad3aabd9bf518d1ac784eb6d821615874f1e6"
+content-hash = "2482d941f917883de711ccdd3dbe9059c1839eeb56138e7e48fe6b562c81fd86"
