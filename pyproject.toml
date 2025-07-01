@@ -12,7 +12,7 @@ mflux = "^0.5.1"
 black = "^25.1.0"
 pathlib = "^1.0.1"
 pathvalidate = "^3.2.3"
-pytest = "^8.3.5"
+pytest = "^8.4.1"
 
 
 [build-system]
